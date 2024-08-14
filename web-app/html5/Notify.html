@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify</title>
+</head>
+<body>
+    <h1>Notify</h1>
+    <form id="notifyForm">
+        <label for="message">Message:</label><br>
+        <input type="text" id="message" name="message"><br>
+        <button type="submit">Send</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        document.getElementById('notifyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const message = document.getElementById('message').value;
+            socket.emit('notify', { message });
+            console.log('Sent message:', message);
+            document.getElementById('message').value = ''; // Clear input field
+        });
+    </script>
+</body>
+</html>
