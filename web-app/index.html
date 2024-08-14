@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspberry Pi Signal Receiver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Signal Receiver</h1>
+    <div id="message"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        socket.on('connect', function() {
+            console.log('Connected to WebSocket server');
+        });
+
+        socket.on('notification', function(data) {
+            document.getElementById('message').innerText = data.message;
+            console.log('Received message:', data.message);
+        });
+    </script>
+</body>
+</html>
