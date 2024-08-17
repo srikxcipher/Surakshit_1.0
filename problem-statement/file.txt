@@ -1,0 +1,12 @@
+A project by WCODERS
+SOS Based Safety System
+PROBLEM STATEMENT:
+ In emergencies, fast communication is crucial. There remains a segment of the population comprising individuals with limited smartphone proficiency, mobility impairments, or those who are bedridden, facing challenges in accessing emergency assistance effectively. This creates a critical gap in ensuring timely support and safety for this vulnerable demographic.
+
+SOLUTION:
+ “SURAKSHIT 1.0” is an innovative SOS alert system driven by a SOS button. This system provides a simple, efficient, and reliable means of alerting emergency services or caregivers, ensuring prompt assistance during critical situations. 
+
+TECH USED:
+ "SURAKSHIT (1.0)" integrates Raspberry Pi for control, GSM Module for communication and Python for programming, along with RPi. GPIO Library for GPIO pin management. AT commands are being used for transmission of alerts through cellular networks and Python’s flask framework for the seamless integration of our SURAKSHIT (1.0) web-app with the Raspberry Pi, forming a robust emergency alert system.
+
+
